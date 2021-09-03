@@ -1,0 +1,35 @@
+<!DOCTYPE >
+<html>
+   <head>
+      <title>VueJS Course</title>
+      <link rel="stylesheet" type="text/css" href="main.css" />
+   </head>
+   <body>
+      <div id="app">
+      <div class="container">
+         <div v-for="(person, index) in people">
+            <ul>
+               <li>{{person.name}}: {{person.message}}</li>
+            </ul>
+         </div>
+         <button type="button" class="move" v-on:click="move">
+         Move to Bottom
+         </button>
+         <div class="card" v-for="person in people" :key="person.name">
+            <h3>{{person.name}}</h3>
+            <p>{{person.message}}</p>
+            <input type="text" />
+         </div>
+         <div>
+            <button type="button" class=move1" @click="move1">
+            degrees</button>
+            <div class="card" v-for="item in degrees" :key="item.name">
+            <h4>{{item.degree}}: {{item.name}}</h4>
+            <input type="number" placeholder="grade:"/>
+         </div>
+      </div>
+    </div>
+      <script src="https://unpkg.com/vue@next"></script>
+      <script src="app.js"></script>
+   </body>
+</html>
